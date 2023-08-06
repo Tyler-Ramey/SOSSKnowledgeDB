@@ -5,17 +5,9 @@
     <link rel="stylesheet" href="..\config\styles.css">
 </head>
 <body>
-<?php
-// Database connection
-try {
-    $pdo = new PDO('mysql:host=localhost;dbname=soss_knowledge_base', 'tramey', 'TMRtmr2021!');
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $pdo->exec('SET NAMES "utf8"');
-} catch (PDOException $e) {
-    echo "Database connection failed: " . $e->getMessage();
-    exit();
-}
+<?php include_once 'db_connect.php' ?>
 
+<?php
 // Function to get the content for a specific tab
 function getTabContent($pdo, $tabName) {
     try {
