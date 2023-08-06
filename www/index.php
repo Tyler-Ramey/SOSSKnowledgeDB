@@ -19,10 +19,10 @@ try {
 // Function to get the content for a specific tab
 function getTabContent($pdo, $tabName) {
     try {
-        $stmt = $pdo->prepare("SELECT content FROM knowledge_base WHERE category = :tabName");
+        $stmt = $pdo->prepare("SELECT id, title FROM knowledge_base WHERE category = :tabName");
         $stmt->bindParam(':tabName', $tabName, PDO::PARAM_STR);
         $stmt->execute();
-        $result = $stmt->fetchColumn();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     } catch (PDOException $e) {
         return "Error: " . $e->getMessage();
@@ -55,23 +55,49 @@ function getTabContent($pdo, $tabName) {
         </div>
 
         <div id="faqsGeneral" class="tabcontent">
-            <?php echo getTabContent($pdo, 'General'); ?>
+            <?php
+            $titles = getTabContent($pdo, 'General');
+            foreach ($titles as $title) {
+            echo '<a class="title-link" href="content.php?id=' . $title['id'] . '">' . $title['title'] . '</a>';
+            }
+            ?>
+
         </div>
 
         <div id="faqsShipping" class="tabcontent">
-            <?php echo getTabContent($pdo, 'Shipping'); ?>
+            <?php
+            $titles = getTabContent($pdo, 'Shipping');
+            foreach ($titles as $title) {
+            echo '<a class="title-link" href="content.php?id=' . $title['id'] . '">' . $title['title'] . '</a>';
+            }
+            ?>
         </div>
 
         <div id="faqsBuyingOnline" class="tabcontent">
-            <?php echo getTabContent($pdo, 'BuyingOnline'); ?>
+            <?php
+            $titles = getTabContent($pdo, 'BuyingOnline');
+            foreach ($titles as $title) {
+            echo '<a class="title-link" href="content.php?id=' . $title['id'] . '">' . $title['title'] . '</a>';
+            }
+            ?>
         </div>
 
         <div id="faqsStatus" class="tabcontent">
-            <?php echo getTabContent($pdo, 'Status'); ?>
+            <?php
+            $titles = getTabContent($pdo, 'Status');
+            foreach ($titles as $title) {
+            echo '<a class="title-link" href="content.php?id=' . $title['id'] . '">' . $title['title'] . '</a>';
+            }
+            ?>
         </div>
 
         <div id="csrProcesses" class="tabcontent">
-            <?php echo getTabContent($pdo, 'CSRProcesses'); ?>
+            <?php
+            $titles = getTabContent($pdo, 'Processes');
+            foreach ($titles as $title) {
+            echo '<a class="title-link" href="content.php?id=' . $title['id'] . '">' . $title['title'] . '</a>';
+            }
+            ?>
         </div>
     </div>
 </main>
