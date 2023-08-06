@@ -67,8 +67,12 @@ main {
     display: none;
 }
 
-footer {
-    background-color: #f0f0f0;
-    padding: 10px 0;
-    text-align: center;
+/* Custom styles for the tab content */
+.tabcontent {
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    margin-top: 10px;
 }
+
+/* Add more styling as needed */
