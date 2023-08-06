@@ -1,7 +1,7 @@
 <?php
 try {
     $servername = "localhost";
-    $username = "admin";
+    $username = "tramey";
     $password = "TMRtmr2021!";
     $dbname = "soss_knowledge_base";
 
