@@ -3,6 +3,9 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    height: 100%;
+    border-left: 50px solid #fe9326;
+    border-right: 50px solid #fe9326;
 }
 
 .container {
@@ -12,7 +15,7 @@ body, html {
 }
 
 header {
-    background-color: #f0f0f0;
+    background-color: darkgray;
     padding: 10px 0;
 }
 
@@ -20,7 +23,7 @@ header .logo {
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
-    color: #333;
+    color: darkgray;
 }
 
 nav {
@@ -75,4 +78,9 @@ main {
     margin-top: 10px;
 }
 
-/* Add more styling as needed */
+footer {
+  background-color: darkgray;
+  padding: 10px 0;
+  text-align: center; /* Center the content horizontally */
+}
+
