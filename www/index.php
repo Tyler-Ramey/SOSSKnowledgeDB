@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Knowledge Base</title>
-    <link rel="stylesheet" href="..\config\styles.css">
+    <link rel="stylesheet" type="text/css" href="..\config\styles.css">
 </head>
 <body>
 <?php include_once 'db_connect.php' ?>
