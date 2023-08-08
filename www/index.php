@@ -24,13 +24,16 @@ function getTabContent($pdo, $tabName) {
 
 <!-- Header -->
 <header>
-        <div class="container">
+        <div class="header_container">
             <a href="#" class="logo">
                 <img src="logo.png" alt="SOSS Logo">
             </a>
             <nav>
-                <input type="text" id="search-bar" placeholder="Search...">
-                <a href="#" class="home-btn">Home</a>
+                <form action="search.php" method="get">
+                    <input type="text" id="search-bar" name="q" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+                <a href="index.php" class="home-btn">Home</a>
             </nav>
         </div>
     </header>
