@@ -1,6 +1,6 @@
 <header>
         <div class="header_container">
-            <a href="#" class="logo">
+            <a href="index.php" class="logo">
                 <img src="logo.png" alt="SOSS Logo">
             </a>
             <nav>
