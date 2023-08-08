@@ -85,9 +85,7 @@ function getTabContent($pdo, $tabName) {
 </main>
 
 <!-- Footer -->
-<footer>
-    Designed by T. Ramey for INFR 495
-</footer>
+<?php include 'footer.php' ?>
 
 <script>
     // JavaScript for tab functionality
