@@ -17,20 +17,31 @@ body, html {
 header {
     background-color: darkgray;
     padding: 10px 0;
+    overflow: auto;
 }
 
-header .logo {
+.header_container {
+    text-align: center;
+}
+
+.header_container .logo {
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
     color: darkgray;
+    display: block;
+    margin: 0 auto 10px;
 }
 
-nav {
-    float: right;
+.header_container nav {
+    float: none;
 }
 
-nav a {
+.search_container {
+    text-align: center;
+}
+
+.header_container nav a {
     margin-left: 10px;
     text-decoration: none;
     color: #333;
@@ -43,6 +54,12 @@ nav input[type="text"] {
 
 main {
     padding: 20px 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
 }
 
 .tab {
